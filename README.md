@@ -8,5 +8,5 @@ Developed a Health Insurance Cost Predictor
 
 ## Achivements
 - Score (accuracy): 99.26% on Training Data and  98.75% on Testing Data
-- Error margin: 1.63%
+- Error margin (Predicted - Acutal Value): 1.63%
 - XGBoost Regressor Outperform Linear Regression with ~1% margin of score (98.85% and 98.82) on Traing and Testing data.
