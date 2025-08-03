@@ -106,6 +106,25 @@ Metric & Value
   - Model Used	XGBoost (Best performer)
   - Deployment	Streamlit app, cloud-ready
 
+
+## Challenges & Solutions
+### Challenge 1: Multicollinearity Between Features
+    Problem: High correlation between variables (e.g., age, BMI, smoking) impacted model interpretability and stability.
+    Solution: Used Variance Inflation Factor (VIF) to identify and reduce multicollinearity, retaining only relevant predictors.
+
+### Challenge 2: High Error in Specific Age Groups
+    Problem: Model showed >30% prediction error in a small segment of the data (mainly for users under 25).
+    Solution: Performed targeted error analysis, then segmented the data by age and trained separate models for <25 and ≥25 age groups. Reduced high-error cases to <2%.
+
+### Challenge 3: Choosing the Best Model
+    Problem: Linear Regression was too simple, but complex models risked overfitting.
+    Solution: Conducted model comparison using cross-validation, selected XGBoost Regressor, which gave better generalization and performance.
+
+### Challenge 4: Making the Model Usable for Non-Technical Users
+    Problem: Model needed to be accessible to underwriters without coding knowledge.
+    Solution: Developed a Streamlit-based web app with a clean UI, enabling real-time prediction through simple form inputs. Prepared for cloud deployment.
+
+
 ## Tools and Technologies
 - Languages: Python
 - ML Libraries: scikit-learn, XGBoost, pandas, NumPy
