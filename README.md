@@ -2,9 +2,7 @@
 
 This project aims to build and deploy a machine learning model to accurately predict individual health insurance costs using demographic and health-related features. It follows a complete ML lifecycle: from problem definition to deployment, with advanced error handling and model optimization strategies.
 
-![HomepageUI](./screenshorts/student_prediction_ui.png)
-
-![HomepageUI](./screenshorts/predicted_value.png)
+![HomepageUI](./img/Health_Insurance_Cost_Prediction_UI.png)
 
 ## Objective:
 - Develop a high-accuracy model (target: >97%).
@@ -27,6 +25,19 @@ Health insurance pricing is a complex process influenced by multiple variables l
 - Applied encoding for categorical variables (LabelEncoder, OneHotEncoder).
 - Used feature scaling where necessary (e.g., Min-Max Scaling for numeric features).
 
+#### univariant_analysis_categorical_feature
+![HomepageUI](./img/univariant_analysis_categorical.png)
+
+#### univariant_analysis_numerical_feature
+![HomepageUI](./img/univariant_analysis_numerical.png)
+
+#### bivariant_analysis_categorical_feature vs insurance_plan
+![HomepageUI](./img/cat_feature_vs_insurance_plan.png)
+
+#### bivariant_analysis_categorical_feature vs income_level
+![HomepageUI](./img/cat_feature_vs_income_level.png)
+
+
 ### Feature Selection
 - Used variance_inflation_factor (VIF) to  measures how much the variance of a regression coefficient is inflated due to multicollinearity with other features.
 - It helps detect redundant (highly correlated) features in a regression model and found income_level has highest VIF i.e 12.44 and income_level has 12.44.
@@ -44,6 +55,9 @@ Health insurance pricing is a complex process influenced by multiple variables l
         - One for age < 25.
         - Another for age ≥ 25
     - This reduced high-error predictions from 30% of total error to less than 2%.
+
+ #### 
+ ![HomepageUI](./img/actural_error_distribution.png)
 
 ### Evaluation Metrics
 Model achieved:
