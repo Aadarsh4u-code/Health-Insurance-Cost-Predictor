@@ -43,6 +43,9 @@ Health insurance pricing is a complex process influenced by multiple variables l
 - It helps detect redundant (highly correlated) features in a regression model and found income_level has highest VIF i.e 12.44 and income_level has 12.44.
 - Once income_level is removed from feature rest of the feature VIF value comes  < 5. which shows less No multicollinearity.
 
+#### VIF
+![HomepageUI](./img/VIF.png)
+
 ### Model Development
 - Trained and compared Linear Regression and XGBoost Regressor.
 - Performed hyperparameter tuning using GridSearchCV and RandomizedSearchCV but both has same result.
@@ -56,8 +59,21 @@ Health insurance pricing is a complex process influenced by multiple variables l
         - Another for age ≥ 25
     - This reduced high-error predictions from 30% of total error to less than 2%.
 
- #### 
+ #### Actual Error Distribution i.e more than 30%
  ![HomepageUI](./img/actural_error_distribution.png)
+
+ #### Distribution_of_age_overall_extreme_error
+ ![HomepageUI](./img/distribution_of_age_overall_extreme_error.png)
+ 
+### Error Difference Distribution after model segmentation
+ ![HomepageUI](./img/error_difference .png) 
+
+### Feature_Importance_in_Linear_Regression
+![HomepageUI](./img/Feature_Importance_in_LinearRegression.png) 
+
+### Feature_Importance_in_XGBoost Regressor
+![HomepageUI](./img/xgboost_feature_importance.png) 
+
 
 ### Evaluation Metrics
 Model achieved:
